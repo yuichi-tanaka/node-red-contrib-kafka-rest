@@ -1,0 +1,31 @@
+<script type="text/javascript">
+RED.nodes.registerType('messagehub',{
+  category: 'output',
+  defaults: {
+    topic: { value: "", required: true }
+  },
+  credentials:{
+    bluemix_credentials:{type:"text"}
+  },
+  inputs: 1,
+  outputs: 0,
+  align: "right",
+  color: "#cccccc",
+  icon: "arrow-in.png",
+  label: function(){
+    return this.name || "messagehub";
+  }
+});
+</script>
+<script type="text/x-red" data-template-name="messagehub">
+<div class="form-row">
+  <label for="node-input-topic"><i class="icon-tag"></i>topic</label>
+  <input type="text" id="node-input-topic"  placeholder="topic">
+</div>
+<div class="form-row">
+  <label for="node-input-bluemix_credentials"><i class="icon-tag"></i>bluemix_credentials</label>
+  <input tyep="text" id="node-input-bluemix_credentials" placeholder="bluemix_credentials">
+</div>
+</script>
+<script type="text/x-red" data-help-name="message_hub">
+</script>
