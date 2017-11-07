@@ -17,7 +17,7 @@ module.exports = function(RED){
     var instance = new mshub(mhConfig);
     try {
       this.on('input', function(msg){
-        instance.produce(topic,{paylaod:msg.payload})
+        instance.produce(topic,msg.payload)
         .then(function(res){
           node.log(JSON.stringify(res));
         })
